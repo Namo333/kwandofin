@@ -1,0 +1,25 @@
+:root {
+	--font-body: Gilroy;
+	--color-main: #41A4DF;
+	--color-bg-main: #00A0FF4F;
+	--color-text: #000000;
+	--color-text2: #fff;
+	--color-smol-text: #111111CC;
+	font-family: var(--font-body);
+	color: var(--color-text);
+}
+
+li{
+	list-style-type: none;
+}
+
+ul{
+	padding-left: 0;
+	margin-bottom: 0;
+}
+
+a{
+	text-decoration: none;
+	color: var(--color-text);
+}
+
