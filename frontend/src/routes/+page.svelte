@@ -4,6 +4,8 @@
 	// import welcome_fallback from '$lib/images/svelte-welcome.png';
 	import Wrapper from "../lib/components/wrapper.svelte";
 	import famBg from "../lib/img/famyli.svg";
+	import artimg from '../lib/img/art.svg';
+	import slider from '../lib/img/Slider.png';
 </script>
 
 <svelte:head>
@@ -11,7 +13,7 @@
 	<meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section>
+<section class="herro">
 	<Wrapper>
 		<div class="content__hero">
 			<div class="hero__left">
@@ -74,18 +76,99 @@
 				</div>
 			</div>
 			<div class="hero__right">
-				<div class="right__bg"></div>
 				<img class="hero__rightImg" src="{ famBg }" alt="">
 			</div>
 		</div>
 	</Wrapper>
 </section>
 
-<section>
+<section class="content__info">
 	<Wrapper>
 		<div class="content__infoBlock">
 			<div class="infoBlock__one">
+				<img src="{ artimg }" alt="">
+				<div class="infoBlock__oneItem">
+					<h1 class="oneItem__title">Simple and Fast Cryptocurrency
+						Payment System.</h1>
+					<p class="oneItem__text">Integrate Crypto Pay into your Telegram bot or website to provide your users with convenient and reliable cryptocurrency payment options. Our system ensures security, speed, and ease of use to meet your business needs.</p>
+				</div>
+			</div>
+			<div class="infoBlock__set">
+				<div class="infoBlock__left">
+					<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M14 16L6 24L14 32" stroke="#41A4DF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M34 16L42 24L34 32" stroke="#41A4DF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M28 8L20 40" stroke="#41A4DF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					<h1 class="infoBlock__leftTitle">Invoicing and Payment Verification via API</h1>
+					<p class="infoBlock__leftText">Create invoices in @CryptoBot and allow users to instantly and securely pay them using the API.</p>
+				</div>
+				<div class="infoBlock__right">
+					<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M14 16L6 24L14 32" stroke="#41A4DF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M34 16L42 24L34 32" stroke="#41A4DF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M28 8L20 40" stroke="#41A4DF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg>
+					<h1 class="infoBlock__leftTitle">Convenient Usage Statistics</h1>
+					<p class="infoBlock__leftText">View the number of created and paid invoices, total number of users, and the percentage of successful payments through our comprehensive usage statistics.</p>
+					
+				</div>
+			</div>
+			<div class="infoBlock__thrio">
+				<div class="infoBlock__left">
+					<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M6 16C6 14.4087 6.63214 12.8826 7.75736 11.7574C8.88258 10.6321 10.4087 10 12 10H36C37.5913 10 39.1174 10.6321 40.2426 11.7574C41.3679 12.8826 42 14.4087 42 16V32C42 33.5913 41.3679 35.1174 40.2426 36.2426C39.1174 37.3679 37.5913 38 36 38H12C10.4087 38 8.88258 37.3679 7.75736 36.2426C6.63214 35.1174 6 33.5913 6 32V16Z" stroke="#41A4DF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M6 20H42" stroke="#41A4DF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M14 30H14.02" stroke="#41A4DF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+						<path d="M22 30H26" stroke="#41A4DF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg> 
+					<h1 class="infoBlock__leftTitle">Balance top-up, payment for goods and services</h1>
+					<p class="infoBlock__leftText">Crypto Pay allows you to organize balance top-up, payment for goods, services, or subscriptions through the system.</p>
+				</div>
+				<div class="infoBlock__left">
+					<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23.9997 6C28.6713 10.1332 34.7686 12.2851 40.9997 12C41.9069 15.086 42.1844 18.3229 41.8159 21.5184C41.4474 24.7138 40.4403 27.8025 38.8545 30.6011C37.2686 33.3996 35.1364 35.8508 32.5846 37.809C30.0327 39.7672 27.1132 41.1924 23.9997 42C20.8861 41.1924 17.9666 39.7672 15.4148 37.809C12.8629 35.8508 10.7307 33.3996 9.14486 30.6011C7.55903 27.8025 6.55194 24.7138 6.18342 21.5184C5.8149 18.3229 6.09248 15.086 6.99967 12C13.2307 12.2851 19.328 10.1332 23.9997 6Z" stroke="#41A4DF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg> 
+					<h1 class="infoBlock__leftTitle">Access Restriction
+						and Control</h1>
+					<p class="infoBlock__leftText">Configure API access for specific IP addresses and manage them.</p>
+				</div>
+
+				<div class="infoBlock__left blue">
+					<svg class="blueImg" width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M0.993361 14.2681L12.3788 35.0749C12.9425 36.3054 14.7461 36.1935 15.6479 34.5156L22.9752 21.0918C21.7352 18.8173 19.1199 14.0444 18.5788 13.1495C18.0377 12.2545 17.0758 11.9562 16.6624 11.9189H2.34608C0.542469 11.9189 0.655198 13.5969 0.993361 14.2681Z" fill="#BEE5F7"/>
+						<path d="M30.0768 11.9184H43.8295C45.3626 11.9184 45.4995 13.4845 45.0695 14.2675C41.6501 20.4947 34.7437 33.1726 34.0222 34.515C33.3008 35.8574 32.1434 36.193 31.655 36.193H14.7459C13.7539 36.193 12.9423 35.7828 12.7168 35.5218C14.1597 36.4167 15.3095 35.1862 15.6477 34.515C18.804 28.698 25.5114 16.5139 26.8077 14.1557C28.1604 11.6947 29.4004 11.9184 30.0768 11.9184Z" fill="white"/>
+					</svg> 
+					<h1 class="infoBlock__leftTitle blueText">The API allows creating invoices that users can instantly pay</h1>
+					<a href="" class="infoBlock__leftButton">
+						Оставить заявку 
+						<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M17.4497 7.05026L7.55024 16.9498M17.4497 7.05026V15.5355M17.4497 7.05026H8.96445" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg> 
+					</a>
+				</div>
 				
+			</div>
+		</div>
+	</Wrapper>
+</section>
+
+<section class="colculate">
+	<Wrapper>
+		<div class="colculate__block">
+			<div class="colculate__blockLeft">
+				<h1 class="colculate__blockLefTitle">The commission for applications ranges from 2.5% to 3%</h1>
+				<p class="colculate__blockLeftext">The commission rates are as follows,
+					based on the total amount of paid invoices</p>
+				<a href="" class="colculate__blockLefButton">
+					Рассчитайте кредит
+					<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M19.4999 12L5.49994 12M19.4999 12L13.4999 18M19.4999 12L13.4999 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+					</svg> 
+				</a>
+			</div>
+			<div class="colculate__blockRight">
+				<img class="colculate__blockRightImg" src="{ slider }" alt="">
 			</div>
 		</div>
 	</Wrapper>
@@ -153,19 +236,6 @@
 	}
 	
 
-	.right__bg{
-		position: absolute;
-		top:  0; 
-		right: 0;
-		left: auto;
-		width: calc(100% - 1000px );
-		border-radius: 0 0 0 25px;
-		height: 102.5vh;
-		flex-shrink: 0; 
-		background-color: var(--color-bg-main);
-		z-index: -1;
-	}
-
 	.hero__leftInfoContent{
 		display: flex;
 	}
@@ -201,6 +271,145 @@
 		font-weight: 500;
 		line-height: 180%;
 		margin-left: 16px;
+	}
+
+	.infoBlock__one{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.infoBlock__set{
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.content__infoBlock{
+		max-width: 100vh;
+		margin: 0 auto;
+	}
+
+	.infoBlock__right{
+		margin-left: 100px;
+	}
+
+	.oneItem__title{
+		font-size: 48px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		letter-spacing: -0.96px; 
+	}
+	.oneItem__text{
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 180%; /* 36px */ 
+		color: var(--color-smol-text);
+	}
+
+	.infoBlock__oneItem{
+		margin-left: 40px;
+	}
+
+	.infoBlock__leftTitle{
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 140%; /* 33.6px */
+		letter-spacing: 0.12px;
+	}
+
+	.infoBlock__leftText{
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 180%; /* 28.8px */
+		letter-spacing: 0.4px;
+		color: var(--color-smol-text);
+	}
+
+	.infoBlock__thrio{
+		display: flex;
+		gap: 60px;
+	}
+
+	.blue{
+		border-radius: 36px;
+		background-color: var(--color-main);
+		display: flex;
+		padding: 48px 36px;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		align-self: stretch;
+	}
+
+	.blueText{
+		text-align: center;
+		color: var(--color-text2);
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		letter-spacing: -0.48px; 
+	}
+
+	.infoBlock__leftButton{
+		color: #fff;
+		align-items: center;
+		display: flex;
+	}
+
+	.colculate{
+		background: var(--color-dark-bg);
+		height: 550px; 
+	}
+
+	.colculate__block{
+		display: flex;
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+	}
+
+	.colculate__blockLeft{
+		color: #fff;
+	}
+
+	.colculate__blockLefTitle{
+		font-size: 48px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: normal;
+		letter-spacing: -0.96px; 
+	}
+
+	.colculate__blockLeftext{
+		color: #B3B3B3;
+		font-size: 20px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 180%; /* 36px */ 
+	}
+
+	.colculate__blockLefButton{
+		color: #fff;
+		background: #41A4DF;
+		border-radius: 36px;
+		flex-shrink: 0;
+		display: flex;
+		width: 246px;
+		height: 22px; 
+		padding: 12px 12px 12px 24px; 
+		justify-content: center;
+		align-items: center;
+		gap: 8px; 
+	}
+
+	.colculate__blockRightImg{
+		width: 100%;
+		margin-top: 100px;
 	}
 
 </style>
