@@ -1,6 +1,7 @@
 <script>
 	import Wrapper from "../lib/components/wrapper.svelte";
 	import Calculate from "../lib/components/calculate.svelte";
+	import Portslider from "../lib/components/slider.svelte";
 	import famBg from "../lib/img/famyli.svg";
 	import artimg from '../lib/img/art.svg';
 	import slider from '../lib/img/Slider.png';
@@ -172,6 +173,21 @@
 	</Wrapper>
 </section>
 
+<section>
+    <Wrapper>
+
+    </Wrapper>
+</section>
+
+<section class="part__block">
+    <Wrapper>
+		<div class="part__blockContent">
+			<Portslider />
+		</div>
+    </Wrapper>
+</section>
+
+
 <style>
 
 	.text__color{
@@ -275,6 +291,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		background: #FAFAFA;
+		border-radius: 36px;
+		padding: 48px 0 48px 0; 
 	}
 
 	.infoBlock__set{
@@ -308,6 +327,17 @@
 
 	.infoBlock__oneItem{
 		margin-left: 40px;
+	}
+
+	.infoBlock__left{
+		background: #FAFAFA;
+		border-radius: 36px;
+		padding: 20px 36px; 
+	}
+	.infoBlock__right{
+		background: #FAFAFA;
+		border-radius: 36px;
+		padding: 20px 36px; 
 	}
 
 	.infoBlock__leftTitle{
@@ -361,7 +391,7 @@
 
 	.colculate{
 		background: var(--color-dark-bg);
-		height: 730px; 
+		padding: 100px 0;
 	}
 
 	.colculate__block{
@@ -406,9 +436,10 @@
 		gap: 8px; 
 	}
 
-	.colculate__blockRightImg{
-		width: 100%;
-		margin-top: 100px;
+	.part__block{
+		background: #232328; 
 	}
+
+
 
 </style>

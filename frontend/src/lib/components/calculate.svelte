@@ -2,6 +2,7 @@
     import crystal1 from "../img/crystal1.svg";
     import crystal2 from "../img/crystal2.svg";
     import whitelogo from "../img/whitelogo.svg";
+  import Wrapper from "./wrapper.svelte";
 
     let loanAmount = 0;
     let interestRate = 0;
@@ -44,53 +45,48 @@
 
             <div class="calc__blockContentVvodContent">
                 <label class="blockContentVvodContent__item">
-                    <p class=""><span>Сумма кредита, ₽:</span> {loanAmount}</p>
-                    <input type="range" min="1" max="10000000" bind:value={loanAmount} on:input={calculateLoan} />
+                    <p class="blockContentVvodContent__itemText"><span>Сумма кредита, ₽:</span> <input class="blockContentVvodContent__itemTextInput" type="number" bind:value={loanAmount}  on:input={calculateLoan} /></p>
+                    <input class="blockContentVvodContent__itemPolsunok" type="range" min="1" max="10000000" bind:value={loanAmount} on:input={calculateLoan} />
                 </label>
 
                 <label class="blockContentVvodContent__item">
-                    <p class=""><span>Годовая ставка, %:</span> {interestRate}</p>
-                    <input type="range" min="1" max="100" step="0.1" bind:value={interestRate} on:input={calculateLoan} />
+                    <p class="blockContentVvodContent__itemText"><span>Годовая ставка, %:</span> <input class="blockContentVvodContent__itemTextInput" type="number" step="0.1" bind:value={interestRate} on:input={calculateLoan} /></p>
+                    <input class="blockContentVvodContent__itemPolsunok" type="range" min="1" max="100" step="0.1" bind:value={interestRate} on:input={calculateLoan} />
                 </label>
                 
                 <label class="blockContentVvodContent__item">
-                    <p class=""><span>Срок кредита, мес:</span> {loanTerm}</p>
-                    <input type="range" min="1" max="24" bind:value={loanTerm} on:input={calculateLoan} />
+                    <p class="blockContentVvodContent__itemText"><span>Срок кредита, мес:</span> <input class="blockContentVvodContent__itemTextInput" type="number" bind:value={loanTerm} on:input={calculateLoan} /></p>
+                    <input class="blockContentVvodContent__itemPolsunok" type="range" min="1" max="24" step="1" bind:value={loanTerm} on:input={calculateLoan} />
                 </label>
             </div>
-        </div>
-        <div class="calc__blockContentRight">
-            <img src="{ whitelogo }" alt="">
         </div>
     </div>
 </div>
 
 <style>
     
-    .calc__block{
+    .calc__block {
         position: relative;
-        max-width: 672px;
-        max-height: 643.215px;
+        min-width: 400px;
         flex-shrink: 0;
         border-radius: 36px;
         backdrop-filter: blur(40px);
-        padding: 23px 53px;
+        padding: 23px 53px 50px 53px;
         background: rgba(255, 255, 255, 0.08);
         color: var(--color-text2);
     }
 
-    .blockContent__title{
-        font-family: Inter; 
+    .blockContent__title {
+        font-family: Inter;
         font-size: 30px;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
         margin: 0;
         padding: 0;
-        
     }
 
-    .blockContent__text{
+    .blockContent__text {
         font-family: Inter;
         font-size: 24px;
         font-style: normal;
@@ -99,27 +95,78 @@
         opacity: 0.6;
         margin: 0;
         padding: 0;
+        padding-bottom: 10px;
     }
 
-    .calc__blockContent{
-        display: flex;
-        gap: 62px;
-    }
-
-    .calc__blockContentVozrat:nth-child(n+2){
+    .calc__blockContentVozrat:nth-child(n+2) {
         padding-top: 12px;
-    
     }
 
-    span{
+    span {
         text-align: center;
         font-family: Inter;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
-        opacity: 0.4; 
+        opacity: 0.4;
     }
 
+    .blockContentVvodContent__itemPolsunok {
+        width: 100%;
+        height: 20px;
+    }
+
+    .calc__blockContentVvodContent {
+        padding-top: 25px;
+    }
+
+    .blockContentVvodContent__itemTextInput{
+        border-radius:10px;
+        border: none;
+        transition: .3s border-color;
+        margin:10px 0;
+        padding:10px;
+        background-color: transparent;
+        color: #fff;
+        outline: none;
+        -webkit-appearance: none;
+        -ms-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    /* Медиа-запросы */
+    @media (max-width: 768px) {
+        .calc__block {
+            min-width: 300px;
+            height: auto;
+            padding: 15px;
+        }
+
+        .blockContent__title {
+            font-size: 24px;
+        }
+
+        .blockContent__text {
+            font-size: 20px;
+        }
+
+        .calc__blockContentVozrat:nth-child(n+2) {
+            padding-top: 8px;
+        }
+
+        span {
+            font-size: 14px;
+        }
+
+        .blockContentVvodContent__itemPolsunok {
+            height: 10px;
+        }
+
+        .calc__blockContentVvodContent {
+            padding-top: 15px;
+        }
+    }
 
 </style>
