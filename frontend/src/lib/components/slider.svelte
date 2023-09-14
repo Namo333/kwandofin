@@ -36,7 +36,7 @@
 </script>
 
 <div class="slide__block">
-    <div class="slider">
+    <div class="slider fixed-slider">
         {#each slides as slide, index}
           {#if index === activeSlide}
             <div class="slide">
@@ -69,6 +69,12 @@
         height: 100vh;
         overflow: hidden;
     }
+
+    .fixed-slider {
+        position: sticky;
+        top: 0;
+        z-index: 999;
+    }   
 
     .slide__block{
         display: flex;
