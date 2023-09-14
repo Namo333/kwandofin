@@ -1,8 +1,6 @@
 <script>
-	// import Counter from './Counter.svelte';
-	// import welcome from '$lib/images/svelte-welcome.webp';
-	// import welcome_fallback from '$lib/images/svelte-welcome.png';
 	import Wrapper from "../lib/components/wrapper.svelte";
+	import Calculate from "../lib/components/calculate.svelte";
 	import famBg from "../lib/img/famyli.svg";
 	import artimg from '../lib/img/art.svg';
 	import slider from '../lib/img/Slider.png';
@@ -168,7 +166,7 @@
 				</a>
 			</div>
 			<div class="colculate__blockRight">
-				<img class="colculate__blockRightImg" src="{ slider }" alt="">
+				<Calculate />
 			</div>
 		</div>
 	</Wrapper>
@@ -231,7 +229,7 @@
 		top: 100px; 
 		right: 0;
 		left: auto;
-		width: calc(100% -  985px );
+		max-width: calc(100% -  985px );
 		flex-shrink: 0; 
 	}
 	
@@ -363,7 +361,7 @@
 
 	.colculate{
 		background: var(--color-dark-bg);
-		height: 550px; 
+		height: 730px; 
 	}
 
 	.colculate__block{
@@ -375,6 +373,7 @@
 
 	.colculate__blockLeft{
 		color: #fff;
+		margin-right: 171px;
 	}
 
 	.colculate__blockLefTitle{
