@@ -21,47 +21,55 @@
     }
 </script>
 
-<div class="calc__block">
-    <div class="calc__blockContent">
-        <div class="calc__blockContentLeft">
-            {#if totalAmount !== undefined && monthlyPayment !== undefined && overpayment !== undefined}
-                <div class="calc__blockContentVozrat">
-                    <h1 class="blockContent__title">Сумма возврата:</h1>
-                    <p class="blockContent__text">{totalAmount.toLocaleString()} ₽</p>
+<div class="calc">
+    <div class="calc__block">
+        <div class="calc__blockContent">
+            <div class="calc__blockContentLeft">
+                {#if totalAmount !== undefined && monthlyPayment !== undefined && overpayment !== undefined}
+                    <div class="calc__blockContentVozrat">
+                        <h1 class="blockContent__title">Сумма возврата:</h1>
+                        <p class="blockContent__text">{totalAmount.toLocaleString()} ₽</p>
+                    </div>
+                    <div class="calc__blockContentVozrat">
+                        <h1 class="blockContent__title">Срок кредита в месяцах:</h1>
+                        <p class="blockContent__text">{loanTerm}</p>
+                    </div>
+                    <div class="calc__blockContentVozrat">
+                        <h1 class="blockContent__title">Ежемесячный платеж:</h1>
+                        <p class="blockContent__text">{monthlyPayment.toLocaleString()} ₽</p>
+                    </div>
+                    <div class="calc__blockContentVozrat">
+                        <h1 class="blockContent__title">Переплата:</h1>
+                        <p class="blockContent__text">{overpayment.toLocaleString()} ₽</p>
+                    </div>
+                {/if}
+    
+                <div class="calc__blockContentVvodContent">
+                    <label class="blockContentVvodContent__item">
+                        <p class="blockContentVvodContent__itemText"><span>Сумма кредита, ₽:</span> <input class="blockContentVvodContent__itemTextInput" type="number" bind:value={loanAmount}  on:input={calculateLoan} /></p>
+                        <input class="blockContentVvodContent__itemPolsunok" type="range" min="1" max="10000000" bind:value={loanAmount} on:input={calculateLoan} />
+                    </label>
+    
+                    <label class="blockContentVvodContent__item">
+                        <p class="blockContentVvodContent__itemText"><span>Годовая ставка, %:</span> <input class="blockContentVvodContent__itemTextInput" type="number" step="0.1" bind:value={interestRate} on:input={calculateLoan} /></p>
+                        <input class="blockContentVvodContent__itemPolsunok" type="range" min="1" max="100" step="0.1" bind:value={interestRate} on:input={calculateLoan} />
+                    </label>
+                    
+                    <label class="blockContentVvodContent__item">
+                        <p class="blockContentVvodContent__itemText"><span>Срок кредита, мес:</span> <input class="blockContentVvodContent__itemTextInput" type="number" bind:value={loanTerm} on:input={calculateLoan} /></p>
+                        <input class="blockContentVvodContent__itemPolsunok" type="range" min="1" max="24" step="1" bind:value={loanTerm} on:input={calculateLoan} />
+                    </label>
                 </div>
-                <div class="calc__blockContentVozrat">
-                    <h1 class="blockContent__title">Срок кредита в месяцах:</h1>
-                    <p class="blockContent__text">{loanTerm}</p>
-                </div>
-                <div class="calc__blockContentVozrat">
-                    <h1 class="blockContent__title">Ежемесячный платеж:</h1>
-                    <p class="blockContent__text">{monthlyPayment.toLocaleString()} ₽</p>
-                </div>
-                <div class="calc__blockContentVozrat">
-                    <h1 class="blockContent__title">Переплата:</h1>
-                    <p class="blockContent__text">{overpayment.toLocaleString()} ₽</p>
-                </div>
-            {/if}
-
-            <div class="calc__blockContentVvodContent">
-                <label class="blockContentVvodContent__item">
-                    <p class="blockContentVvodContent__itemText"><span>Сумма кредита, ₽:</span> <input class="blockContentVvodContent__itemTextInput" type="number" bind:value={loanAmount}  on:input={calculateLoan} /></p>
-                    <input class="blockContentVvodContent__itemPolsunok" type="range" min="1" max="10000000" bind:value={loanAmount} on:input={calculateLoan} />
-                </label>
-
-                <label class="blockContentVvodContent__item">
-                    <p class="blockContentVvodContent__itemText"><span>Годовая ставка, %:</span> <input class="blockContentVvodContent__itemTextInput" type="number" step="0.1" bind:value={interestRate} on:input={calculateLoan} /></p>
-                    <input class="blockContentVvodContent__itemPolsunok" type="range" min="1" max="100" step="0.1" bind:value={interestRate} on:input={calculateLoan} />
-                </label>
-                
-                <label class="blockContentVvodContent__item">
-                    <p class="blockContentVvodContent__itemText"><span>Срок кредита, мес:</span> <input class="blockContentVvodContent__itemTextInput" type="number" bind:value={loanTerm} on:input={calculateLoan} /></p>
-                    <input class="blockContentVvodContent__itemPolsunok" type="range" min="1" max="24" step="1" bind:value={loanTerm} on:input={calculateLoan} />
-                </label>
             </div>
         </div>
     </div>
+    <div class="calc__blockbg">
+        <img class="calc__blockbgCrystal1" src="{ crystal1 }" alt="">
+        <img src="{ crystal2 }" alt="" class="calc__blockbgCrystal2">
+        <div class="calc__blockbgCrystal2Blue"></div>
+    </div>
 </div>
+
 
 <style>
     
@@ -74,6 +82,7 @@
         padding: 23px 53px 50px 53px;
         background: rgba(255, 255, 255, 0.08);
         color: var(--color-text2);
+        z-index: 2;
     }
 
     .blockContent__title {
@@ -135,6 +144,31 @@
         -moz-appearance: none;
         appearance: none;
     }
+
+    .calc__blockbgCrystal1{
+        position: absolute;
+        margin-top: -630px;
+        margin-left: -65px;
+    }
+
+    .calc__blockbgCrystal2{
+        position: absolute;
+        z-index: 3;
+        margin-top: -80px;
+        margin-left: 250px;
+    }
+
+    .calc__blockbgCrystal2Blue{
+        position: absolute;
+        width: 59px;
+        height: 53.893px;
+        flex-shrink: 0;
+        background-color: #4744DD;
+        border-radius: 100px;
+        margin-top: -60px;
+        margin-left: 350px;
+    }
+    
 
     /* Медиа-запросы */
     @media (max-width: 768px) {

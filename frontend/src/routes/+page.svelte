@@ -7,34 +7,6 @@
 	import famBg from "../lib/img/famyli.svg";
 	import artimg from '../lib/img/art.svg';
 
-	// onMount(() => {
-    //     const slider = document.querySelector('.fixed-slider');
-        
-    //     window.addEventListener('scroll', () => {
-    //         const rect = slider.getBoundingClientRect();
-    //         const isInViewport = rect.top >= 0 && rect.bottom <= window.innerHeight;
-            
-    //         if (isInViewport) {
-    //         slider.classList.add('fixed');
-    //         } else {
-    //         slider.classList.remove('fixed');
-    //         }
-    //     });
-        
-    //     slider.addEventListener('wheel', (event) => {
-    //         event.preventDefault(); // Отменяем стандартное поведение прокрутки страницы
-            
-    //         const delta = Math.sign(event.deltaY); // Получаем направление прокрутки
-            
-    //         if (delta > 0) {
-    //         // Прокрутка вниз, переключаемся на следующий слайд
-    //         // Добавьте здесь свой код для переключения на следующий слайд
-    //         } else if (delta < 0) {
-    //         // Прокрутка вверх, переключаемся на предыдущий слайд
-    //         // Добавьте здесь свой код для переключения на предыдущий слайд
-    //         }
-    //     });
-    // });
 </script>
 
 <svelte:head>
@@ -209,7 +181,7 @@
     </Wrapper>
 </section>
 
-<section class="part__block fixed-slider">
+<section class="part__block">
     <Wrapper>
 		<div class="part__blockContent">
 			<Portslider />
@@ -469,12 +441,5 @@
 	.part__block{
 		background: #232328; 
 	}
-	/* .fixed-slider{
-		height: 100vh;  
-    	overflow-y: scroll;   
-		overflow: hidden;
-	}*/
-
-
 
 </style>

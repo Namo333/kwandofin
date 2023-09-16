@@ -1,6 +1,8 @@
 <script>
     import grad from "../img/grad.svg";
-    import { onMount } from 'svelte';
+    import { onMount, onDestroy  } from 'svelte';
+
+    let timer;
 
     let activeSlide = 0;
     let slides = [
@@ -21,6 +23,7 @@
     }
     ];
 
+    
     function setActiveSlide(index) {
         activeSlide = index;
     }
@@ -33,23 +36,42 @@
         setActiveSlide(activeSlide - 1);
     }
 
+    function changeSlideAutomatically() {
+        timer = setTimeout(() => {
+            if (activeSlide === slides.length - 1) {
+                setActiveSlide(0);
+            } else {
+                nextSlide();
+            }
+            changeSlideAutomatically();
+        }, 5000);
+    }
+
+    onMount(() => {
+        changeSlideAutomatically();
+    });
+
+    onDestroy(() => {
+        clearTimeout(timer);
+    });
+
 </script>
 
 <div class="slide__block">
-    <div class="slider fixed-slider">
+    <div class="slider">
         {#each slides as slide, index}
-          {#if index === activeSlide}
-            <div class="slide">
-                <div class="slide__left">
-                    <img src={slide.image} alt={slide.title} />
+            {#if index === activeSlide}
+                <div class="slide">
+                    <div class="slide__left">
+                        <img src={slide.image} alt={slide.title} />
+                    </div>
+                    <div class="slide__right">
+                        <h2>{slide.title}</h2>
+                        <p>{slide.text}</p>
+                        <a href="">Узнать больше</a>
+                    </div>
                 </div>
-                <div class="slide__right">
-                    <h2>{slide.title}</h2>
-                    <p>{slide.text}</p>
-                    <a href="">Узнать больше</a>
-                </div>
-            </div>
-          {/if}
+            {/if}
         {/each}
     </div>
       
@@ -69,12 +91,6 @@
         height: 100vh;
         overflow: hidden;
     }
-
-    .fixed-slider {
-        position: sticky;
-        top: 0;
-        z-index: 999;
-    }   
 
     .slide__block{
         display: flex;
@@ -151,4 +167,6 @@
     .indicator__number{
         color: var(--color-text2);
     }
+    
+
 </style>
