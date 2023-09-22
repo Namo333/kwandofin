@@ -8,18 +8,18 @@
     let slides = [
     {
         image: grad,
-        title: 'Instant Auto Sales:  Boost conversion',
-        text: 'Immediately deliver digital products and services to your users.',
+        title: 'InstantAuto Sales: Boost conversion',
+        text: 'Immediately deliver digital productsand services to your users.',
     },
     {
         image: grad,
         title: 'Channels integration: Seamless access',
-        text: 'Automatically unlock exclusive content to your users.',
+        text: 'Automatically unlock exclusive contentto your users.',
     },
     {
         image: grad,
         title: 'Endless customization: with Webhooks',
-        text: 'Receive successful payment notifications in real-time. Integrate to any scenario of your service.',
+        text: 'Receive successful payment notifications inreal-time. Integrate to any scenario of your service.',
     }
     ];
 

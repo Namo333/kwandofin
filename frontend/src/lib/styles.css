@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
 :root {
-	--font-body: Gilroy;
+	--font-body: "Gilroy", Inter;
 	--color-main: #41A4DF;
 	--color-bg-main: #00A0FF4F;
 	--color-text: #000000;
