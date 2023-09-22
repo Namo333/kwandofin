@@ -4,6 +4,7 @@
 	import Wrapper from "../lib/components/wrapper.svelte";
 	import Calculate from "../lib/components/calculate.svelte";
 	import Portslider from "../lib/components/slider.svelte";
+	import Map from "../lib/components/map.svelte";
 	import famBg from "../lib/img/famyli.svg";
 	import artimg from '../lib/img/art.svg';
 
@@ -188,6 +189,12 @@
 			<Portslider />
 		</div>
     </Wrapper>
+</section>
+
+<section class="map__block">
+	<Wrapper>
+		<Map />
+	</Wrapper>
 </section>
 
 
