@@ -126,29 +126,30 @@
 					<h1 class="infoBlock__leftTitle">Balance top-up, payment for goods and services</h1>
 					<p class="infoBlock__leftText">Crypto Pay allows you to organize balance top-up, payment for goods, services, or subscriptions through the system.</p>
 				</div>
-				<div class="infoBlock__left">
-					<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M23.9997 6C28.6713 10.1332 34.7686 12.2851 40.9997 12C41.9069 15.086 42.1844 18.3229 41.8159 21.5184C41.4474 24.7138 40.4403 27.8025 38.8545 30.6011C37.2686 33.3996 35.1364 35.8508 32.5846 37.809C30.0327 39.7672 27.1132 41.1924 23.9997 42C20.8861 41.1924 17.9666 39.7672 15.4148 37.809C12.8629 35.8508 10.7307 33.3996 9.14486 30.6011C7.55903 27.8025 6.55194 24.7138 6.18342 21.5184C5.8149 18.3229 6.09248 15.086 6.99967 12C13.2307 12.2851 19.328 10.1332 23.9997 6Z" stroke="#41A4DF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-					</svg> 
-					<h1 class="infoBlock__leftTitle">Access Restriction
-						and Control</h1>
-					<p class="infoBlock__leftText">Configure API access for specific IP addresses and manage them.</p>
-				</div>
-
-				<div class="infoBlock__left blue">
-					<svg class="blueImg" width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path d="M0.993361 14.2681L12.3788 35.0749C12.9425 36.3054 14.7461 36.1935 15.6479 34.5156L22.9752 21.0918C21.7352 18.8173 19.1199 14.0444 18.5788 13.1495C18.0377 12.2545 17.0758 11.9562 16.6624 11.9189H2.34608C0.542469 11.9189 0.655198 13.5969 0.993361 14.2681Z" fill="#BEE5F7"/>
-						<path d="M30.0768 11.9184H43.8295C45.3626 11.9184 45.4995 13.4845 45.0695 14.2675C41.6501 20.4947 34.7437 33.1726 34.0222 34.515C33.3008 35.8574 32.1434 36.193 31.655 36.193H14.7459C13.7539 36.193 12.9423 35.7828 12.7168 35.5218C14.1597 36.4167 15.3095 35.1862 15.6477 34.515C18.804 28.698 25.5114 16.5139 26.8077 14.1557C28.1604 11.6947 29.4004 11.9184 30.0768 11.9184Z" fill="white"/>
-					</svg> 
-					<h1 class="infoBlock__leftTitle blueText">The API allows creating invoices that users can instantly pay</h1>
-					<a href="" class="infoBlock__leftButton">
-						Оставить заявку 
-						<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M17.4497 7.05026L7.55024 16.9498M17.4497 7.05026V15.5355M17.4497 7.05026H8.96445" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+				<div class="infoBlock__contentRight">
+					<div class="infoBlock__left">
+						<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M23.9997 6C28.6713 10.1332 34.7686 12.2851 40.9997 12C41.9069 15.086 42.1844 18.3229 41.8159 21.5184C41.4474 24.7138 40.4403 27.8025 38.8545 30.6011C37.2686 33.3996 35.1364 35.8508 32.5846 37.809C30.0327 39.7672 27.1132 41.1924 23.9997 42C20.8861 41.1924 17.9666 39.7672 15.4148 37.809C12.8629 35.8508 10.7307 33.3996 9.14486 30.6011C7.55903 27.8025 6.55194 24.7138 6.18342 21.5184C5.8149 18.3229 6.09248 15.086 6.99967 12C13.2307 12.2851 19.328 10.1332 23.9997 6Z" stroke="#41A4DF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
 						</svg> 
-					</a>
+						<h1 class="infoBlock__leftTitle">Access Restriction
+							and Control</h1>
+						<p class="infoBlock__leftText">Configure API access for specific IP addresses and manage them.</p>
+					</div>
+	
+					<div class="infoBlock__left blue">
+						<svg class="blueImg" width="46" height="48" viewBox="0 0 46 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M0.993361 14.2681L12.3788 35.0749C12.9425 36.3054 14.7461 36.1935 15.6479 34.5156L22.9752 21.0918C21.7352 18.8173 19.1199 14.0444 18.5788 13.1495C18.0377 12.2545 17.0758 11.9562 16.6624 11.9189H2.34608C0.542469 11.9189 0.655198 13.5969 0.993361 14.2681Z" fill="#BEE5F7"/>
+							<path d="M30.0768 11.9184H43.8295C45.3626 11.9184 45.4995 13.4845 45.0695 14.2675C41.6501 20.4947 34.7437 33.1726 34.0222 34.515C33.3008 35.8574 32.1434 36.193 31.655 36.193H14.7459C13.7539 36.193 12.9423 35.7828 12.7168 35.5218C14.1597 36.4167 15.3095 35.1862 15.6477 34.515C18.804 28.698 25.5114 16.5139 26.8077 14.1557C28.1604 11.6947 29.4004 11.9184 30.0768 11.9184Z" fill="white"/>
+						</svg> 
+						<h1 class="infoBlock__leftTitle blueText">The API allows creating invoices that users can instantly pay</h1>
+						<a href="" class="infoBlock__leftButton">
+							Оставить заявку 
+							<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M17.4497 7.05026L7.55024 16.9498M17.4497 7.05026V15.5355M17.4497 7.05026H8.96445" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							</svg> 
+						</a>
+					</div>
 				</div>
-				
 			</div>
 		</div>
 	</Wrapper>
@@ -243,12 +244,8 @@
 	}
 
 	.hero__rightImg{
-		position: absolute;
-		top: 100px; 
-		right: 0;
-		left: auto;
-		max-width: calc(100% -  985px );
-		flex-shrink: 0; 
+		max-width: calc(100% -  20px );
+
 	}
 	
 
@@ -304,7 +301,6 @@
 	}
 
 	.content__infoBlock{
-		max-width: 100vh;
 		margin: 0 auto;
 	}
 
@@ -332,12 +328,10 @@
 	}
 
 	.infoBlock__left{
-		background: #FAFAFA;
 		border-radius: 36px;
 		padding: 20px 36px; 
 	}
 	.infoBlock__right{
-		background: #FAFAFA;
 		border-radius: 36px;
 		padding: 20px 36px; 
 	}
@@ -357,6 +351,10 @@
 		line-height: 180%; /* 28.8px */
 		letter-spacing: 0.4px;
 		color: var(--color-smol-text);
+	}
+
+	.infoBlock__contentRight{
+		display: flex;
 	}
 
 	.infoBlock__thrio{
